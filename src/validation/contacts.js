@@ -13,7 +13,7 @@ export const addContactSchema = Joi.object({
     'string.empty': 'Phone number cannot be empty.',
   }),
   email: Joi.string().email(),
-  isFavorite: Joi.boolean(),
+  isFavourite: Joi.boolean(),
   contactType: Joi.string().valid(...CONTACT_TYPE_LIST),
 });
 
@@ -21,6 +21,6 @@ export const updateContactSchema = Joi.object({
   name: Joi.string(),
   phoneNumber: Joi.string(),
   email: Joi.string().email(),
-  isFavorite: Joi.boolean(),
+  isFavourite: Joi.boolean(),
   contactType: Joi.string().valid(...CONTACT_TYPE_LIST),
 });
