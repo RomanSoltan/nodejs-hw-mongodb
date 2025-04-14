@@ -4,7 +4,8 @@ export const handleSaveError = (error, doc, next) => {
 };
 
 export const setUpdateSettings = function (next) {
-  this.option.new = true;
-  this.option.runValidators = true;
+  // для спрацювання валідації при patch
+  this.options.new = true;
+  this.options.runValidators = true;
   next();
 };
