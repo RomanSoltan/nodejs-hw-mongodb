@@ -68,8 +68,6 @@ export const loginUser = async (payload) => {
 export const refreshUser = async ({ refreshToken, sessionId }) => {
   const session = await findSession({ refreshToken, _id: sessionId });
 
-  console.log(session);
-
   if (!session) {
     throw createHttpError(401, 'Session for refresh not found');
   }

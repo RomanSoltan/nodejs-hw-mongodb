@@ -6,7 +6,7 @@ import {
 } from '../services/auth.js';
 
 const setupSession = (res, session) => {
-  res.cookie('refresfToken', session.refreshToken, {
+  res.cookie('refreshToken', session.refreshToken, {
     httpOnly: true,
     expires: session.refreshTokenValidUntil,
   });
@@ -43,7 +43,6 @@ export const loginController = async (req, res) => {
 
 export const refreshController = async (req, res) => {
   const session = await refreshUser(req.cookies);
-  console.log('Controller: ', req.cookies);
 
   setupSession(res, session);
 
