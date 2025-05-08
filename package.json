@@ -6,7 +6,10 @@
   "description": "nodejs-hw-mongodb",
   "scripts": {
     "start": "node ./src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": "npm run build-docs",
+    "build-docs": "redocly bundle docs/openapi.yaml --ext json -o docs/swagger.json",
+    "preview-docs": "redocly preview-docs"
   },
   "keywords": [],
   "author": "Roman Soltan <romabandit88@gmail.com>",
