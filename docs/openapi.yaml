@@ -11,11 +11,13 @@ tags:
     description: Operations about contacts.
   - name: Auth
     description: Auth operations.
-
 servers:
   - url: http://localhost:3000
   - url: https://nodejs-hw-mongodb-4ihc.onrender.com/api/v1
-# paths:
+paths:
+  /contacts/{id}:
+    get:
+      $ref: ../swagger/paths/contacts/{id}/get.yaml
 # тут будуть посилання на ендпоінти
 components:
   securitySchemes:
