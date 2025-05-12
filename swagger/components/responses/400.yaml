@@ -24,23 +24,6 @@ content:
               type: string
               example: 'Bad Request'
             errors:
-              type: object
-              properties:
-                message:
-                  type: string
-                  example: Phone number is required
-                path:
-                  type: array
-                  example: phoneNumber
-                type:
-                  type: string
-                  example: any.required
-                context:
-                  type: object
-                  properties:
-                    label:
-                      type: string
-                      example: phoneNumber
-                    key:
-                      type: string
-                      example: phoneNumber
+              type: array
+              items:
+                $ref: ../schemas/errors.yaml

@@ -1,0 +1,26 @@
+type: object
+required:
+  - message
+  - path
+  - type
+  - context
+
+properties:
+  message:
+    type: string
+    example: Phone number is required
+  path:
+    type: array
+    example: phoneNumber
+  type:
+    type: string
+    example: any.required
+  context:
+    type: object
+    properties:
+      label:
+        type: string
+        example: phoneNumber
+      key:
+        type: string
+        example: phoneNumber
